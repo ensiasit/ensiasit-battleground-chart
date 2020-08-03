@@ -1,0 +1,14 @@
+api:
+  service:
+    name: api-service
+    port: 8080
+    targetPort: 8080
+
+  deployment:
+    name: api-deployment
+    replicas: 1
+    container:
+      name: api-container
+      image: ensiasitclub/ensiasit-battleground-api
+      tag: latest
+      containerPort: 8080
