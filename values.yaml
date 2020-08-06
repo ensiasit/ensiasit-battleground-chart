@@ -12,6 +12,7 @@ api:
       image: ensiasitclub/ensiasit-battleground-api
       tag: latest
       containerPort: 8080
+    envFilePath: .prod.env
 
   ingress:
     name: api-ingress
@@ -33,3 +34,7 @@ ui:
   
   ingress:
     name: ui-ingress
+
+mongodb:
+  auth:
+    enabled: false

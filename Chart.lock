@@ -2,5 +2,8 @@ dependencies:
 - name: traefik
   repository: https://containous.github.io/traefik-helm-chart
   version: 8.9.1
-digest: sha256:c13d6d88d8c84a1a46c8214c750dc0b68eccbac9670321437cd25fd47e2eb2fd
-generated: "2020-08-06T00:18:46.678522+02:00"
+- name: mongodb
+  repository: https://charts.bitnami.com/bitnami
+  version: 8.2.3
+digest: sha256:e1b0a3e36c26db9fba6bed9dcb788a07111576b04236c9d3af9bd654b95d713d
+generated: "2020-08-06T20:30:49.164751+02:00"

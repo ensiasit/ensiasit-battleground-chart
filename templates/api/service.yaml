@@ -4,8 +4,8 @@ metadata:
   name: "{{ .Release.Name }}-{{ .Values.api.service.name }}"
 spec:
   ports:
-    - port: {{ .Values.api.service.port }}
-      targetPort: {{ .Values.api.service.targetPort }}
+  - port: {{ .Values.api.service.port }}
+    targetPort: {{ .Values.api.service.targetPort }}
   selector:
     app: {{ .Release.Name }}
     tier: api

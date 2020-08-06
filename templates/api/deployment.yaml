@@ -17,5 +17,8 @@ spec:
       containers:
       - name: {{ .Values.api.deployment.container.name }}
         image: "{{ .Values.api.deployment.container.image }}:{{ .Values.api.deployment.container.tag }}"
+        env:
+        - name: ENV_FILE_PATH
+          value: {{ .Values.api.deployment.envFilePath }}
         ports:
-          - containerPort: {{ .Values.api.deployment.container.containerPort }}
+        - containerPort: {{ .Values.api.deployment.container.containerPort }}

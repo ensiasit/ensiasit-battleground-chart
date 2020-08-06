@@ -7,4 +7,7 @@ appVersion: 0.1.0
 dependencies:
 - name: traefik
   version: ~8.9.1
-  repository: "https://containous.github.io/traefik-helm-chart"
+  repository: https://containous.github.io/traefik-helm-chart
+- name: mongodb
+  version: ~8.2.3
+  repository: "@bitnami"
