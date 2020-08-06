@@ -12,3 +12,24 @@ api:
       image: ensiasitclub/ensiasit-battleground-api
       tag: latest
       containerPort: 8080
+
+  ingress:
+    name: api-ingress
+
+ui:
+  service:
+    name: ui-service
+    port: 80
+    targetPort: 80
+
+  deployment:
+    name: ui-deployment
+    replicas: 1
+    container:
+      name: ui-container
+      image: ensiasitclub/ensiasit-battleground-ui
+      tag: latest
+      containerPort: 80
+  
+  ingress:
+    name: ui-ingress

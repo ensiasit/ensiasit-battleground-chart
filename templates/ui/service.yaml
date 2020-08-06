@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: "{{ .Release.Name }}-{{ .Values.ui.service.name }}"
+spec:
+  ports:
+    - port: {{ .Values.ui.service.port }}
+      targetPort: {{ .Values.ui.service.targetPort }}
+  selector:
+    app: {{ .Release.Name }}
+    tier: ui
+  type: ClusterIP

@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: "{{ .Release.Name }}-{{ .Values.ui.ingress.name }}"
+spec:
+  entryPoints:
+    - web
+  routes:
+  - kind: Rule
+    match: PathPrefix(`/`)
+    services:
+    - name: "{{ .Release.Name }}-{{ .Values.ui.service.name }}"
+      port: {{ .Values.ui.service.port }}
+      passHostHeader: true
+      responseForwarding:
+        flushInterval: 1ms
+      scheme: http
